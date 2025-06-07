@@ -1,94 +1,96 @@
-/* Sidebar common style */
-.sidebar-form,
+/* Post.css */
+
+/* General layout */
+body {
+  background-color: #f8f9fa;
+}
+
+/* Sidebar form */
+.sidebar-form {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 350px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1050;
+  overflow-y: auto;
+}
+
+.sidebar-form.show {
+  right: 0;
+}
+
+/* Cart sidebar */
 .cart-sidebar {
   position: fixed;
   top: 0;
-  right: -350px; /* Hidden offscreen by default */
+  right: -100%;
   width: 350px;
-  height: 100vh;
-  background: #f8f9fa;
-  box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  overflow-y: auto;
   transition: right 0.3s ease;
   z-index: 1050;
+  overflow-y: auto;
 }
 
-/* Slide in */
-.sidebar-form.show,
 .cart-sidebar.show {
   right: 0;
 }
 
-/* Scrollbar styling (optional) */
-.sidebar-form::-webkit-scrollbar,
-.cart-sidebar::-webkit-scrollbar {
-  width: 6px;
+/* Close icon for cart */
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #888;
 }
 
-.sidebar-form::-webkit-scrollbar-thumb,
-.cart-sidebar::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+.close-icon:hover {
+  color: #000;
 }
 
-
-/* Heading style */
-.sidebar-form h4,
-.cart-sidebar h4 {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
+/* Card styles */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+  border-radius: 10px;
 }
 
-/* Buttons inside sidebar */
-.sidebar-form button,
-.cart-sidebar button {
-  width: 100%;
+.card:hover {
+  transform: translateY(-4px);
 }
 
-/* Overlay when sidebar open (optional) */
-body.sidebar-open::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1040;
-}
-
-/* =================
-   Responsive Styles
-   ================= */
-
-/* Tablets and below */
-@media (max-width: 768px) {
+/* Responsive */
+@media screen and (max-width: 768px) {
   .sidebar-form,
   .cart-sidebar {
-    width: 100vw;       /* Full viewport width */
-    right: -100vw;      /* Hide fully offscreen */
-    padding: 15px;
-  }
-  .sidebar-form.show,
-  .cart-sidebar.show {
-    right: 0;
+    width: 100%;
   }
 }
 
-/* Mobile Portrait */
-@media (max-width: 480px) {
-  .sidebar-form,
-  .cart-sidebar {
-    padding: 10px;
-  }
-  
-  /* Increase font sizes for easier reading */
-  .sidebar-form h4,
-  .cart-sidebar h4 {
-    font-size: 1.5rem;
-  }
-  
-  .sidebar-form button,
-  .cart-sidebar button {
-    font-size: 1.1rem;
-  }
+/* Button spacing */
+button + button {
+  margin-left: 10px;
+}
+
+/* Heading spacing */
+h2 {
+  font-weight: bold;
+}
+
+/* Tag footer style */
+.card-footer {
+  background-color: #f1f1f1;
+  font-size: 0.9rem;
+  border-top: 1px solid #e0e0e0;
 }
