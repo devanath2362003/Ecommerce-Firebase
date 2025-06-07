@@ -89,9 +89,11 @@ const Posts = () => {
   };
 
   return (
+    <div className="postbg">
+
     <Container className="mt-4 position-relative">
       <h2 className="mb-4 d-flex justify-content-between align-items-center">
-        Posts List
+        <h1 className="ppp">POST LIST</h1>
         <div>
           <Button variant="success" className="me-2" onClick={() => setShowAddForm(true)}>
             + Add Post
@@ -192,6 +194,8 @@ const Posts = () => {
         </Button>
       </div>
     </Container>
+        </div>
+
   );
 };
 

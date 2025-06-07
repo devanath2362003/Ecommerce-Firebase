@@ -30,6 +30,9 @@ const Signup = () => {
   };
 
   return (
+    <div className="signupbg">
+
+   
     <div className="signup-container">
   <h2>Signup</h2>
   <input
@@ -53,10 +56,10 @@ const Signup = () => {
     Signup with Google
   </button>
   <Link to="/login">
-                    Already Signup
+                    Already Signup 
                   </Link>
 </div>
-
+ </div>
   );
 };
 

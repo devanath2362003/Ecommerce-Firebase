@@ -1,8 +1,22 @@
-/* Signup.css */
+/* Signup Background */
+.signupbg {
+  background-image: url('../pexels-jan-van-der-wolf-11680885-19130897.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
 
+/* Signup Form Container */
 .signup-container {
+  width: 100%;
   max-width: 400px;
-  margin: 80px auto;
   padding: 30px;
   background-color: #ffffff;
   border-radius: 12px;
@@ -11,11 +25,13 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+/* Form Title */
 .signup-container h2 {
   margin-bottom: 25px;
   color: #333;
 }
 
+/* Input Fields */
 .signup-input {
   width: 100%;
   padding: 12px 14px;
@@ -31,6 +47,7 @@
   border-color: #007bff;
 }
 
+/* Buttons */
 .signup-button {
   width: 100%;
   padding: 12px;
@@ -50,8 +67,51 @@
 
 .google-button {
   background-color: #db4437;
+  color: white;
+  margin-top: 10px;
 }
 
 .google-button:hover {
   background-color: #c23321;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .signupbg {
+    padding: 20px;
+  }
+
+  .signup-container {
+    padding: 25px;
+  }
+
+  .signup-container h2 {
+    font-size: 22px;
+  }
+
+  .signup-button,
+  .google-button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 20px 15px;
+  }
+
+  .signup-container h2 {
+    font-size: 20px;
+  }
+
+  .signup-input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .signup-button,
+  .google-button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }

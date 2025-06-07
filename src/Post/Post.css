@@ -1,96 +1,132 @@
-/* Post.css */
-
-/* General layout */
-body {
-  background-color: #f8f9fa;
+/* Post Background */
+.postbg {
+  background-image: url('../pexels-fotios-photos-30062429.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
 }
-
-/* Sidebar form */
+.ppp{
+  color: #f8f9fa;
+}
+/* Sidebar Form */
 .sidebar-form {
   position: fixed;
   top: 0;
   right: -100%;
   width: 350px;
   height: 100%;
-  background-color: #fff;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  transition: right 0.3s ease;
-  z-index: 1050;
+  background: #ffffff;
+  padding: 30px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease-in-out;
   overflow-y: auto;
+  z-index: 999;
 }
 
 .sidebar-form.show {
   right: 0;
 }
 
-/* Cart sidebar */
+.sidebar-form h4 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Cart Sidebar */
 .cart-sidebar {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 350px;
+  left: -100%;
+  width: 300px;
   height: 100%;
-  background-color: #fff;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  background: #f8f9fa;
   padding: 20px;
-  transition: right 0.3s ease;
-  z-index: 1050;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
   overflow-y: auto;
 }
 
 .cart-sidebar.show {
-  right: 0;
+  left: 0;
 }
 
-/* Close icon for cart */
-.close-icon {
+.cart-sidebar h4 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cart-sidebar .close-icon {
   position: absolute;
   top: 10px;
   right: 12px;
-  background: none;
+  font-size: 20px;
+  background: transparent;
   border: none;
-  font-size: 22px;
   cursor: pointer;
-  color: #888;
 }
 
-.close-icon:hover {
-  color: #000;
-}
-
-/* Card styles */
+/* Cards */
 .card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease-in-out;
-  border-radius: 10px;
+  transition: transform 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .sidebar-form,
+/* Responsive Layout */
+@media (max-width: 992px) {
+  .sidebar-form {
+    width: 100%;
+  }
+
   .cart-sidebar {
     width: 100%;
   }
 }
 
-/* Button spacing */
-button + button {
-  margin-left: 10px;
+@media (max-width: 768px) {
+  .postbg {
+    padding: 40px 10px;
+  }
+
+  .card .btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .sidebar-form,
+  .cart-sidebar {
+    padding: 20px;
+  }
 }
 
-/* Heading spacing */
-h2 {
-  font-weight: bold;
-}
+@media (max-width: 576px) {
+  .sidebar-form h4,
+  .cart-sidebar h4 {
+    font-size: 18px;
+  }
 
-/* Tag footer style */
-.card-footer {
-  background-color: #f1f1f1;
-  font-size: 0.9rem;
-  border-top: 1px solid #e0e0e0;
+  .card .btn {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  .cart-sidebar .close-icon {
+    font-size: 18px;
+  }
 }

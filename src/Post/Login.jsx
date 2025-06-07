@@ -32,6 +32,8 @@ const Login = () => {
   };
 
   return (
+    <div className="loginbg">
+
     <div className="login-container">
   <h2>Login</h2>
   <input
@@ -55,6 +57,8 @@ const Login = () => {
     Login with Google
   </button>
 </div>
+    </div>
+
 
   );
 };
